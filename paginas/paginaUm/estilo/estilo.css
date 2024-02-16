@@ -1,0 +1,41 @@
+@import url(/site/paginas/paginaDois/estilo/estilo.css);
+
+.jogo__estilo{
+    width: 400px;
+    height: 600px;
+    margin: 10px 12px;
+}
+
+.main__estilo__um{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.conteudo__estilo{
+    width: auto;
+}
+
+.rodape__estilo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px outset var(--azul-neon);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 54px;
+    background-color: var(--azul-escuro);
+
+    & img{
+      width: 50px;
+    }
+}
+
+@media (max-width:1366px) and (min-width:700px){
+    .rodape__estilo{
+        position: relative;
+        bottom: 0px;
+    }    
+}

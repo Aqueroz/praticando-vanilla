@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* alterar nomes e cores */
+:root{
+    /* base caso queira mudar posteriormente */
+    --preto:#000;
+    --cinza-escuro:#111111;
+    --azul-escuro:#003366;
+    --ciano:#00CCCC;
+    --roxo:#660099;
+    --prata:#CCCCCC;
+    --azul-acizentado: #4A6572;
+    --azul-claro:#4EB3D3;
+
+    /* cores neon, gosto delas */
+
+    --verde-neon: #39FF14;
+    --azul-neon:#00FFFF;
+    --rosa-neon: #FF1493;
+    --laranja-neon:#FFA500;
+    --amarelo-neon:#FFFF00;
+    --roxo-neon: #9400D3;
+
+/* usar um padrao, sendo necessario apenas chamar a variavel. creio que fica mais facil fazer uma alteracao geral, visto que site está sendo criado paara testar combinacoes de cores */
+    --sombra-neon: 0 0 10px 5px;
+
+}
+
+/* animacao do botao */
+/* falando de uma forma mais simples de entender, keyframes é tipo uma funcao do css */
+@keyframes girar{
+    0%{
+        transform: rotate(0deg);
+        border-color: var(--azul-neon);
+    }
+    100%{
+        transform: rotate(360deg);
+        border-color: var(--verde-neon);
+    }
+}
+
+
+body{
+    background-color: var(--cinza-escuro);
+    color: var(--prata);
+}
+/* funcao vista em sass presente no css */
+/* tornou o css muito melhor */
+
+.menu__superior__estilo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px absolute var(--rosa-neon);
+    box-shadow: var(--sombra-neon) var(--rosa-neon);
+    height: 3rem;
+
+    & a{
+        text-decoration: none;
+        color: var(--ciano);
+    }
+
+    & a:hover{
+        color: red;
+    }
+}
+
+.main__estilo{
+    width: 400px;
+    margin: 100px auto;
+    border-radius: 15px;
+    background-color: var(--preto);
+    box-shadow: var(--sombra-neon) var(--rosa-neon);
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        color: var(--verde-neon);
+    }
+
+    & input{
+        border-radius: 20px;
+        margin: 10px 0;
+        border: 2px inset var(--laranja-neon);
+    }
+    & label{
+        padding: 12px 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    & input[type="submit"]{
+        cursor: pointer;
+    }
+
+}
+
+
+
+.login__estilo{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    margin-top: 4px;
+    height: 200px;
+}
+
